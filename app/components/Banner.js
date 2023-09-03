@@ -5,7 +5,7 @@ import Image from "next/image"
 function Banner() {
 
     const imageLoader = ({ src, width, quality }) => {
-        return `https://a0.muscache.com${src}?w=${width}&q=${quality || 75}`
+        return(`https://a0.muscache.com${src}?w=${width}&q=${quality || 75}`)
     }
 
     return (

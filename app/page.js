@@ -37,7 +37,7 @@ export default async function Home() {
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
 
-        <section className="pt-6">
+        <section className="mt-10">
           <h2 className="text-3xl sm:text-4xl font-semibold">Explore Nearby</h2>
           {/* Pull some data from a server - API endpoints */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -53,7 +53,7 @@ export default async function Home() {
         </section>
 
         <section>
-          <h2 className="text-3xl sm:text-4xl font-semibold py-8">Live Anywhere</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold my-8 sm:my-10">Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {dataLive?.map(({img, title}) => (
               <MediumCard

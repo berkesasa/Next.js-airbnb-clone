@@ -9,6 +9,7 @@ function MediumCard({ img, title }) {
                     className="rounded-xl"
                     src={img}
                     fill
+                    priority
                     sizes="(max-width: 768px) 100vw"
                     alt="Live Anywhere"
                 />

@@ -7,17 +7,18 @@ import SmallCards from "./components/SmallCards";
 
 
 async function getNearby() {
-
-  const res = await fetch('https://www.jsonkeeper.com/b/4G1G')
-  return res.json()
-
+  const nearby = await fetch('https://www.jsonkeeper.com/b/4G1G')
+  return nearby.json()
 }
 
 async function getLive() {
+  const live = await fetch('https://www.jsonkeeper.com/b/VHHT')
+  return live.json()
+}
 
-  const res = await fetch('https://www.jsonkeeper.com/b/VHHT')
-  return res.json()
-
+async function getSearchResults() {
+  const results = await fetch('https://www.jsonkeeper.com/b/5NPS')
+  return results.json()
 }
 
 
@@ -25,7 +26,8 @@ export default async function Home() {
 
   const dataNearby = await getNearby();
   const dataLive = await getLive();
-
+  const dataSearchResults = await getSearchResults();
+  
   return (
     <div>
 

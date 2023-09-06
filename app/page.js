@@ -16,17 +16,13 @@ async function getLive() {
   return live.json()
 }
 
-async function getSearchResults() {
-  const results = await fetch('https://www.jsonkeeper.com/b/5NPS')
-  return results.json()
-}
 
 
 export default async function Home() {
 
   const dataNearby = await getNearby();
   const dataLive = await getLive();
-  const dataSearchResults = await getSearchResults();
+
   
   return (
     <div>

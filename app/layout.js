@@ -21,7 +21,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Airbnb',
-  
+  verification: {
+    google: '5FXgW7DvTvu1f0axTo26se4t8XJmrWAHk_c3ioEbQZs',
+  },
 }
 
 

@@ -13,26 +13,16 @@ async function getSearchResults() {
     return results.json()
 }
 
+
 export default async function Search() {
 
-    // const searchParams = useSearchParams();
-
-    // const queryLocation = searchParams.get("location");
-    // const queryStartDate = searchParams.get("startDate");
-    // const queryEndDate = searchParams.get("endDate");
-    // const queryNoOfGuests = searchParams.get("noOfGuests");
-
-    // const formattedStartDate = format(new Date(queryStartDate), "dd MMMM yy")
-    // const formattedEndDate = format(new Date(queryEndDate), "dd MMMM yy")
-    // const range = `${formattedStartDate}-${formattedEndDate}`
-
-    const dataSearchResults = await getSearchResults();
+    const searchResults = await getSearchResults();
 
     return (
         <div>
 
             <Suspense fallback={<SearchBarFallback />}>
-                <SearchBar results={dataSearchResults} />
+                <SearchBar results={searchResults} />
             </Suspense>
 
             <Footer />

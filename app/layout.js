@@ -1,19 +1,9 @@
 import './globals.css'
+import { Suspense } from 'react'
 import { Inter } from 'next/font/google'
-// import ProgressBar from '@badrap/bar-of-progress'
-// import { useRouter } from 'next/router'
+import LoadingBar from './components/LoadingBar'
 
 const inter = Inter({ subsets: ['latin'] })
-// const progress = new ProgressBar({
-//   size:4,
-//   color: "#FE595E",
-//   className: "z-50",
-//   delay: 100
-// })
-
-// const Router = useRouter()
-
-
 
 // Router.events.on("routeChangeStart", progress.start)
 // Router.events.on("routeChangeComplete", progress.finish)
@@ -30,7 +20,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Suspense fallback={null}>
+          <LoadingBar />
+        </Suspense>
+      </body>
     </html>
   )
 }

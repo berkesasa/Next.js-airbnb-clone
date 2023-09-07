@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div className="bg-gray-100 text-gray-600">
+        <div className="bg-gray-100 text-gray-600 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 px-8 sm:px-16 py-14 max-w-7xl mx-auto">
             <div className="space-y-4 text-xs tetx-gray-400">
                 <h5 className="font-bold">About</h5>

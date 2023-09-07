@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation'
 import Header from "./Header"
 import format from 'date-fns/format';
 import InfoCard from './InfoCard';
+import Map from './Map';
 
 export default function SearchResults({ results }) {
 
@@ -32,8 +33,9 @@ export default function SearchResults({ results }) {
 
         <>
             <Header placeholder={`${dataSearch[0].location} | ${dataSearch[0].dateRange} | ${dataSearch[0].noOfGuests} guests`} />
-            <main className="flex">
-                <section className="'flex-grow mt-10 px-6">
+            <main className="flex items-start">
+
+                <section className="flex-grow pt-10 px-6">
                     <p className="text-xs">300+ Stays - {dataSearch[0].dateRange} - for {dataSearch[0].noOfGuests} guests</p>
                     <h1 className="text-3xl font-semibold mt-2 mb-6">Stays in {queryLocation}</h1>
                     <div className="hidden md:inline-flex mb-5 space-x-3 flex-wrap text-gray-800">
@@ -57,6 +59,10 @@ export default function SearchResults({ results }) {
                         />
                     ))}
 
+                </section>
+
+                <section className='sticky top-[92px] inlife-flex min-w-[800px] h-[calc(100vh-92px)]'>
+                    <Map results = {results} />
                 </section>
             </main>
         </>

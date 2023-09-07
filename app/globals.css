@@ -6,4 +6,8 @@
     .button {
         @apply px-4 py-2 hover:shadow-lg cursor-pointer border rounded-full active:scale-95 transition select-none active:bg-gray-100 transform duration-100 ease-out
     }
+
+    div[mapboxgl-children] {
+        display: none;
+      }
 }

@@ -14,6 +14,7 @@ async function getSearchResults() {
 }
 
 
+
 export default async function Search() {
 
     const searchResults = await getSearchResults();

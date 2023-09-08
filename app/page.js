@@ -6,6 +6,7 @@ import MediumCard from "./components/MediumCard";
 import SmallCards from "./components/SmallCards";
 
 
+
 async function getNearby() {
   const nearby = await fetch('https://www.jsonkeeper.com/b/4G1G')
   return nearby.json()
@@ -18,12 +19,14 @@ async function getLive() {
 
 
 
+
+
 export default async function Home() {
 
   const dataNearby = await getNearby();
   const dataLive = await getLive();
 
-  
+
   return (
     <div>
 
@@ -53,7 +56,7 @@ export default async function Home() {
         <section>
           <h2 className="text-3xl sm:text-4xl font-semibold my-8 sm:my-10">Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            {dataLive?.map(({img, title}) => (
+            {dataLive?.map(({ img, title }) => (
               <MediumCard
                 key={img}
                 img={img}

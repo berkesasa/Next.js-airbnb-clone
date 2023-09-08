@@ -9,5 +9,7 @@
 
     div[mapboxgl-children] {
         display: none;
-      }
+    }
+
+
 }

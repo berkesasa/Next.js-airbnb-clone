@@ -7,7 +7,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 
 
-function Map({ results, mapStyle }) {
+function Map({ results }) {
 
 
     const [selectedLocation, setSelectedLocation] = useState({});
@@ -28,7 +28,7 @@ function Map({ results, mapStyle }) {
                 zoom: 12
             }}
             style={{ width: "100%", height: "100%" }}
-            mapStyle={mapStyle}
+            mapStyle={`https://api.maptiler.com/maps/067adaad-17b2-4574-9e2c-cdd91074ecbb/style.json?key=${process.env.maplibre_key}`}
         >
             {results.map((result) => (
 
@@ -55,18 +55,6 @@ function Map({ results, mapStyle }) {
                         </Popup>)
 
                     }
-
-                    {/* {selectedLocation ? (
-                        <Popup
-                            offset={markerOffset}
-                            // onClose={() => setSelectedLocation({})}
-                            // closeOnClick={true}
-                            latitude={result.lat}
-                            longitude={result.long}
-                        >
-                            {result.title}
-                        </Popup>
-                    ):(false)} */}
                 </div>
             ))}
 

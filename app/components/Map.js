@@ -5,7 +5,10 @@ import maplibregl from 'maplibre-gl';
 import { useState } from 'react';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-function Map({ results }) {
+
+
+function Map({ results, mapStyle }) {
+
 
     const [selectedLocation, setSelectedLocation] = useState({});
 
@@ -25,7 +28,7 @@ function Map({ results }) {
                 zoom: 12
             }}
             style={{ width: "100%", height: "100%" }}
-            mapStyle={`https://api.maptiler.com/maps/067adaad-17b2-4574-9e2c-cdd91074ecbb/style.json?key=${process.env.maplibre_key}`}
+            mapStyle={mapStyle}
         >
             {results.map((result) => (
 

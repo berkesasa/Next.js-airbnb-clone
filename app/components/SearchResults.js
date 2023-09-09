@@ -6,7 +6,7 @@ import format from 'date-fns/format';
 import InfoCard from './InfoCard';
 import Map from './Map';
 
-export default function SearchResults({ results }) {
+export default function SearchResults({ results, mapStyle }) {
 
     const searchParams = useSearchParams();
 
@@ -28,6 +28,7 @@ export default function SearchResults({ results }) {
             dateRange: range,
         }
     ]
+
 
     return (
 
@@ -62,7 +63,7 @@ export default function SearchResults({ results }) {
                 </section>
 
                 <section className='sticky top-[92px] inlife-flex min-w-[800px] h-[calc(100vh-92px)]'>
-                    <Map results = {results} />
+                    <Map results = {results} mapStyle={mapStyle} />
                 </section>
             </main>
         </>

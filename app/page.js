@@ -18,9 +18,6 @@ async function getLive() {
 }
 
 
-
-
-
 export default async function Home() {
 
   const dataNearby = await getNearby();
@@ -30,17 +27,14 @@ export default async function Home() {
   return (
     <div>
 
-      {/* Header */}
       <Header />
 
-      {/* Banner */}
       <Banner />
 
-      <main className="max-w-7xl mx-auto px-8 sm:px-16">
+      <main className="max-w-7xl mx-auto px-8 sm:px-16 overflow-hidden">
 
         <section className="mt-10">
           <h2 className="text-3xl sm:text-4xl font-semibold">Explore Nearby</h2>
-          {/* Pull some data from a server - API endpoints */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {dataNearby?.map(({ img, distance, location }) => (
               <SmallCards
@@ -74,7 +68,7 @@ export default async function Home() {
         />
 
       </main>
-
+      
       <Footer />
 
     </div>

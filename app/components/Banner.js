@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image"
 
-
 function Banner() {
 
     const imageLoader = ({ src, width, quality }) => {

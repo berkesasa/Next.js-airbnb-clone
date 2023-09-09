@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import format from "date-fns/format"
 
 function SearchBarFallback() {
-    return <>placeholder</>
+    return <>Loading Contents</>
 }
 
 async function getSearchResults() {

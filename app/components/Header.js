@@ -47,9 +47,8 @@ function Header({placeholder}) {
 
 
     return (
-        <header className="sticky top-0 z-50 grid grid-cols-3 p-5 bg-white shadow-md md:px-10">
+        <header className="sm:sticky top-0 z-50 grid grid-cols-3 p-5 bg-white shadow-md md:px-10">
 
-            {/* left */}
             <div onClick={() => router.push("/")} className="relative flex items-center my-auto cursor-pointer">
                 <Image
                     className="h-6 sm:h-10"
@@ -63,7 +62,6 @@ function Header({placeholder}) {
                 />
             </div>
 
-            {/* mid-search */}
             <div className="flex items-center py-1 sm:py-2 border-2 rounded-full md:shadow-sm overflow-hidden">
                 <input
                     value={searchInput}
@@ -73,7 +71,6 @@ function Header({placeholder}) {
                 <MagnifyingGlassIcon className="hidden h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:inline-flex md:mx-2 flex-shrink-0" />
             </div>
 
-            {/* right */}
             <div className="flex space-x-2 md:space-x-4 items-center justify-end text-gray-500">
                 <p className="hidden md:inline cursor-pointer">Become a host</p>
                 <GlobeAltIcon className="h-5 sm:h-6 flex-shrink-0" />
@@ -85,15 +82,18 @@ function Header({placeholder}) {
             </div>
 
             {searchInput && (
-                <div className='flex flex-col col-span-3 mx-auto'>
+                <div className='flex flex-col col-span-3 sm:mx-auto'>
                     <DateRangePicker
+                    fixedHeight={true}
+                    scroll={true}
+                        
                         ranges={[selectionRange]}
                         minDate={new Date()}
                         rangeColors={['#FD5B61']}
                         onChange={handleSelect}
                     />
-                    <div className='flex items-center border-b mb-4 pb-1'>
-                        <h2 className='text-2xl flex-grow font-semibold'>Number of Guests</h2>
+                    <div className='flex items-center border-b mb-4 pb-1 grid-cols-2'>
+                        <h2 className='max-sm:text-xl sm:text-2xl flex-grow font-semibold'>Number of Guests</h2>
                         <UsersIcon className='h-5' />
                         <input min={1} value={noOfGuests} onChange={(e) => setNoOfGuests(e.target.value)} className='w-12 pl-2 text-lg text-red-400 outline-none' type="number" />
                     </div>

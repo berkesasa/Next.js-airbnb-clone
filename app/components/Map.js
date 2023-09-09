@@ -6,7 +6,6 @@ import { useState } from 'react';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 
-
 function Map({ results }) {
 
 

@@ -2,14 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@media only screen and (max-width: 600px)  {
+
+    .rdrDateRangePickerWrapper{
+        font-size: 5px !important;
+    }
+
+    .rdrDefinedRangesWrapper {
+        width: 100% !important;
+    }
+
+    .rdrDateRangePickerWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rdrStaticRangeLabel{
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    
+    .rdrStaticRanges {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .rdrInputRanges {
+        display: flex;
+        justify-content: center;
+        flex-direction: row !important;
+        
+    }
+
+    .rdrInputRange{
+        font-size: 10px !important;
+    }
+
+    .rdrMonth{
+        width: 100% !important;
+    }
+}
+
 @layer components {
     .button {
-        @apply px-4 py-2 hover:shadow-lg cursor-pointer border rounded-full active:scale-95 transition select-none active:bg-gray-100 transform duration-100 ease-out
+        @apply px-4 py-2 hover:shadow-lg cursor-pointer border rounded-full active:scale-95 transition select-none active:bg-gray-100 transform duration-100 ease-out flex items-center justify-center h-full
     }
 
     div[mapboxgl-children] {
         display: none;
     }
-
-
 }

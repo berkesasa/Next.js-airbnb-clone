@@ -5,10 +5,6 @@ import LoadingBar from './components/LoadingBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// Router.events.on("routeChangeStart", progress.start)
-// Router.events.on("routeChangeComplete", progress.finish)
-// Router.events.on("routeChangeError", progress.finish)
-
 export const metadata = {
   title: 'Airbnb',
   verification: {

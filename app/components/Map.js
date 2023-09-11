@@ -18,6 +18,7 @@ function Map({ results }) {
 
     const center = getCenter(coordinates)
     const markerOffset = [-20, -10]
+    
 
     return (
         <MapView

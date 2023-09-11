@@ -64,6 +64,10 @@ This project uses the following technologies:
 
 - [Next.js 13.4](https://nextjs.org/): A React framework that enables server-side rendering and other advanced features for building modern web applications.
 
+- [Date Range](https://www.npmjs.com/package/react-date-range): A date range picker component for selecting date ranges.
+
+- [Maplibre](https://maplibre.org/): Library used for map display.
+
 
 ## License
 

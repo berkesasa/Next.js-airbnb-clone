@@ -3,7 +3,7 @@
 
 
 This project is a Next.js application developed to mimic the core functionalities of the Airbnb website. The technologies used in the project include Next.js, React, and Tailwind CSS.
-
+If you want to look at the project live: [Live Project](https://airbnb-clone-berkesasa.vercel.app/)
 
 ## Table of Contents
 
